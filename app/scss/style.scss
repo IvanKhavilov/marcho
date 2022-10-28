@@ -22,15 +22,18 @@
   &__list-link {
     color: $title;
     text-transform: uppercase;
-    padding-bottom: 1px;
+    padding: 0 2px 1px;
     transition: all 0.4s;
+    @extend %roboto-400;
     &:hover {
       border-bottom: 1px solid $accent;
       color: $accent;
+      @extend %roboto-700;
     }
   }
   &__list-link--active {
     color: $accent;
+    @extend %roboto-700;
     border-bottom: 1px solid $accent;
   }
 }
