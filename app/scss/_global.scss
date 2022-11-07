@@ -39,3 +39,51 @@ a {
   max-width: 570px;
   margin: 0 auto 55px;
 }
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 25px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/home-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    color: #727272;
+    padding-right: 40px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 9px;
+      height: 10px;
+      position: absolute;
+      right: 15px;
+      top: 8px;
+      background-image: url("../images/angle-right.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &:last-child {
+      color: $accent;
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
