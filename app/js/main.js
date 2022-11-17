@@ -116,3 +116,38 @@ $(function () {
   const deadline = $(".promo__clock").attr("data-time");
   initializeClock("clockdiv", deadline);
 });
+
+map = new google.maps.Map(document.getElementById("map"), {
+  center: { lat: 40.738783742026264, lng: -74.16373616178291 },
+  zoom: 13,
+  styles: [
+    {
+      stylers: [
+        {
+          hue: "#dd0d0d",
+        },
+      ],
+    },
+    {
+      featureType: "road",
+      elementType: "labels",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        {
+          lightness: 100,
+        },
+        {
+          visibility: "simplified",
+        },
+      ],
+    },
+  ],
+});
