@@ -1,0 +1,41 @@
+.video-fashion {
+  background-image: url(../images/fasion-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 125px 0;
+  &__inner {
+    display: flex;
+  }
+  &__popup {
+    margin-right: 60px;
+    width: 535px;
+    height: 480px;
+    background-image: url(../images/video-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__subtitle {
+    font-size: 22px;
+    padding-top: 75px;
+    margin-bottom: 5px;
+    color: $accent;
+    text-transform: uppercase;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__text {
+    margin-bottom: 55px;
+  }
+  &__link {
+    @extend %btn;
+  }
+}
